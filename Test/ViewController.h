@@ -6,8 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestBaseViewController.h"
 
-@interface ViewController : UIViewController
+
+@interface ViewController : TestBaseViewController
 
 
 @end

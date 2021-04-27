@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DC01F3A7C4D8DB1B96CEFB2 /* libPods-Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F86BD6B0DCB0D47DB4F9C104 /* libPods-Test.a */; };
+		EF1CE53F2623D9570069A459 /* GDPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CE53E2623D9570069A459 /* GDPerson.m */; };
+		EF1CE55B262684630069A459 /* TestBaseViewController+Beauty.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CE55A262684630069A459 /* TestBaseViewController+Beauty.m */; };
+		EF1CE5602626DB500069A459 /* TestSuperBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CE55F2626DB500069A459 /* TestSuperBaseViewController.m */; };
 		EF586492260ECED500405197 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF586491260ECED500405197 /* AppDelegate.m */; };
 		EF586495260ECED500405197 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF586494260ECED500405197 /* SceneDelegate.m */; };
 		EF586498260ECED500405197 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF586497260ECED500405197 /* ViewController.m */; };
@@ -14,9 +18,26 @@
 		EF58649D260ECED600405197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF58649C260ECED600405197 /* Assets.xcassets */; };
 		EF5864A0260ECED600405197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF58649E260ECED600405197 /* LaunchScreen.storyboard */; };
 		EF5864A3260ECED600405197 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5864A2260ECED600405197 /* main.m */; };
+		EF5864B5260ED07900405197 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5864B4260ED07900405197 /* Person.m */; };
+		EF5864B9260ED0F300405197 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5864B8260ED0F300405197 /* Presenter.m */; };
+		EF5864BD260ED20C00405197 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5864BC260ED20C00405197 /* TestView.m */; };
+		EF8E048126317F0F00F8AD8D /* TKSDWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8E047F26317F0E00F8AD8D /* TKSDWeakProxy.m */; };
+		EFB618072617291E00C39568 /* AudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB618062617291E00C39568 /* AudioViewController.m */; };
+		EFB61812261C63F100C39568 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB61811261C63F100C39568 /* MasonryViewController.m */; };
+		EFC0B84C261DA5C400900242 /* TestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC0B84B261DA5C400900242 /* TestBaseViewController.m */; };
+		EFC0B852261DAA3500900242 /* TestOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC0B851261DAA3500900242 /* TestOneViewController.m */; };
+		EFC0B858261ED9EB00900242 /* TestShared.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC0B857261ED9EB00900242 /* TestShared.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5920A0D94DFA8A78C55B5437 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		C22B3B87E3710AB3F03BF412 /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
+		EF1CE53D2623D9570069A459 /* GDPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDPerson.h; sourceTree = "<group>"; };
+		EF1CE53E2623D9570069A459 /* GDPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDPerson.m; sourceTree = "<group>"; };
+		EF1CE559262684630069A459 /* TestBaseViewController+Beauty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestBaseViewController+Beauty.h"; sourceTree = "<group>"; };
+		EF1CE55A262684630069A459 /* TestBaseViewController+Beauty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestBaseViewController+Beauty.m"; sourceTree = "<group>"; };
+		EF1CE55E2626DB500069A459 /* TestSuperBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSuperBaseViewController.h; sourceTree = "<group>"; };
+		EF1CE55F2626DB500069A459 /* TestSuperBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSuperBaseViewController.m; sourceTree = "<group>"; };
 		EF58648D260ECED500405197 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF586490260ECED500405197 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EF586491260ECED500405197 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +50,26 @@
 		EF58649F260ECED600405197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF5864A1260ECED600405197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF5864A2260ECED600405197 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF5864B1260ECF5800405197 /* PersonProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonProtocol.h; sourceTree = "<group>"; };
+		EF5864B3260ED07900405197 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		EF5864B4260ED07900405197 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		EF5864B7260ED0F300405197 /* Presenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
+		EF5864B8260ED0F300405197 /* Presenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
+		EF5864BB260ED20B00405197 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		EF5864BC260ED20C00405197 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		EF8E047F26317F0E00F8AD8D /* TKSDWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKSDWeakProxy.m; sourceTree = "<group>"; };
+		EF8E048026317F0E00F8AD8D /* TKSDWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKSDWeakProxy.h; sourceTree = "<group>"; };
+		EFB618052617291E00C39568 /* AudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioViewController.h; sourceTree = "<group>"; };
+		EFB618062617291E00C39568 /* AudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioViewController.m; sourceTree = "<group>"; };
+		EFB61810261C63F100C39568 /* MasonryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
+		EFB61811261C63F100C39568 /* MasonryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
+		EFC0B84A261DA5C400900242 /* TestBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBaseViewController.h; sourceTree = "<group>"; };
+		EFC0B84B261DA5C400900242 /* TestBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBaseViewController.m; sourceTree = "<group>"; };
+		EFC0B850261DAA3500900242 /* TestOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOneViewController.h; sourceTree = "<group>"; };
+		EFC0B851261DAA3500900242 /* TestOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneViewController.m; sourceTree = "<group>"; };
+		EFC0B856261ED9EB00900242 /* TestShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestShared.h; sourceTree = "<group>"; };
+		EFC0B857261ED9EB00900242 /* TestShared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestShared.m; sourceTree = "<group>"; };
+		F86BD6B0DCB0D47DB4F9C104 /* libPods-Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +77,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DC01F3A7C4D8DB1B96CEFB2 /* libPods-Test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D420D211A561C64171D4AF91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5920A0D94DFA8A78C55B5437 /* Pods-Test.debug.xcconfig */,
+				C22B3B87E3710AB3F03BF412 /* Pods-Test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF1CE53C2623D93B0069A459 /* 内存地址面试 */ = {
+			isa = PBXGroup;
+			children = (
+				EF1CE53D2623D9570069A459 /* GDPerson.h */,
+				EF1CE53E2623D9570069A459 /* GDPerson.m */,
+			);
+			path = "内存地址面试";
+			sourceTree = "<group>";
+		};
 		EF586484260ECED500405197 = {
 			isa = PBXGroup;
 			children = (
 				EF58648F260ECED500405197 /* Test */,
 				EF58648E260ECED500405197 /* Products */,
+				D420D211A561C64171D4AF91 /* Pods */,
+				F0EEF80ED5A33D3771B9595A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +129,17 @@
 				EF586494260ECED500405197 /* SceneDelegate.m */,
 				EF586496260ECED500405197 /* ViewController.h */,
 				EF586497260ECED500405197 /* ViewController.m */,
+				EFC0B850261DAA3500900242 /* TestOneViewController.h */,
+				EFC0B851261DAA3500900242 /* TestOneViewController.m */,
+				EF8E047E26317F0E00F8AD8D /* 定时器 */,
+				EF8E045F262D566400F8AD8D /* 类别调用 */,
+				EF1CE53C2623D93B0069A459 /* 内存地址面试 */,
+				EFC0B855261ED97500900242 /* 单例使用 */,
+				EFC0B849261DA5A800900242 /* 父类控制器 */,
+				EFB6180F261C63D500C39568 /* Masonry布局 */,
+				EFB618092617292400C39568 /* 音量控制 */,
+				EF5864AB260ECEE300405197 /* MVP */,
+				EF5864AA260ECEDD00405197 /* MVVM */,
 				EF586499260ECED500405197 /* Main.storyboard */,
 				EF58649C260ECED600405197 /* Assets.xcassets */,
 				EF58649E260ECED600405197 /* LaunchScreen.storyboard */,
@@ -76,6 +149,123 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		EF5864AA260ECEDD00405197 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		EF5864AB260ECEE300405197 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				EF5864AF260ECF0100405197 /* View */,
+				EF5864AE260ECEF700405197 /* Presenter */,
+				EF5864AD260ECEF100405197 /* Model */,
+				EF5864AC260ECEEB00405197 /* VC */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		EF5864AC260ECEEB00405197 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		EF5864AD260ECEF100405197 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF5864B3260ED07900405197 /* Person.h */,
+				EF5864B4260ED07900405197 /* Person.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF5864AE260ECEF700405197 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EF5864B1260ECF5800405197 /* PersonProtocol.h */,
+				EF5864B7260ED0F300405197 /* Presenter.h */,
+				EF5864B8260ED0F300405197 /* Presenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EF5864AF260ECF0100405197 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF5864BB260ED20B00405197 /* TestView.h */,
+				EF5864BC260ED20C00405197 /* TestView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF8E045F262D566400F8AD8D /* 类别调用 */ = {
+			isa = PBXGroup;
+			children = (
+				EF1CE559262684630069A459 /* TestBaseViewController+Beauty.h */,
+				EF1CE55A262684630069A459 /* TestBaseViewController+Beauty.m */,
+			);
+			path = "类别调用";
+			sourceTree = "<group>";
+		};
+		EF8E047E26317F0E00F8AD8D /* 定时器 */ = {
+			isa = PBXGroup;
+			children = (
+				EF8E048026317F0E00F8AD8D /* TKSDWeakProxy.h */,
+				EF8E047F26317F0E00F8AD8D /* TKSDWeakProxy.m */,
+			);
+			path = "定时器";
+			sourceTree = "<group>";
+		};
+		EFB618092617292400C39568 /* 音量控制 */ = {
+			isa = PBXGroup;
+			children = (
+				EFB618052617291E00C39568 /* AudioViewController.h */,
+				EFB618062617291E00C39568 /* AudioViewController.m */,
+			);
+			path = "音量控制";
+			sourceTree = "<group>";
+		};
+		EFB6180F261C63D500C39568 /* Masonry布局 */ = {
+			isa = PBXGroup;
+			children = (
+				EFB61810261C63F100C39568 /* MasonryViewController.h */,
+				EFB61811261C63F100C39568 /* MasonryViewController.m */,
+			);
+			path = "Masonry布局";
+			sourceTree = "<group>";
+		};
+		EFC0B849261DA5A800900242 /* 父类控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				EFC0B84A261DA5C400900242 /* TestBaseViewController.h */,
+				EFC0B84B261DA5C400900242 /* TestBaseViewController.m */,
+				EF1CE55E2626DB500069A459 /* TestSuperBaseViewController.h */,
+				EF1CE55F2626DB500069A459 /* TestSuperBaseViewController.m */,
+			);
+			path = "父类控制器";
+			sourceTree = "<group>";
+		};
+		EFC0B855261ED97500900242 /* 单例使用 */ = {
+			isa = PBXGroup;
+			children = (
+				EFC0B856261ED9EB00900242 /* TestShared.h */,
+				EFC0B857261ED9EB00900242 /* TestShared.m */,
+			);
+			path = "单例使用";
+			sourceTree = "<group>";
+		};
+		F0EEF80ED5A33D3771B9595A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F86BD6B0DCB0D47DB4F9C104 /* libPods-Test.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +273,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF5864A6260ECED600405197 /* Build configuration list for PBXNativeTarget "Test" */;
 			buildPhases = (
+				DEE7043E47F69CA7B5EFD17B /* [CP] Check Pods Manifest.lock */,
 				EF586489260ECED500405197 /* Sources */,
 				EF58648A260ECED500405197 /* Frameworks */,
 				EF58648B260ECED500405197 /* Resources */,
@@ -140,15 +331,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DEE7043E47F69CA7B5EFD17B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF586489260ECED500405197 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5864BD260ED20C00405197 /* TestView.m in Sources */,
+				EFC0B852261DAA3500900242 /* TestOneViewController.m in Sources */,
+				EFB618072617291E00C39568 /* AudioViewController.m in Sources */,
+				EF1CE5602626DB500069A459 /* TestSuperBaseViewController.m in Sources */,
 				EF586498260ECED500405197 /* ViewController.m in Sources */,
 				EF586492260ECED500405197 /* AppDelegate.m in Sources */,
+				EF5864B9260ED0F300405197 /* Presenter.m in Sources */,
+				EFC0B858261ED9EB00900242 /* TestShared.m in Sources */,
+				EF1CE55B262684630069A459 /* TestBaseViewController+Beauty.m in Sources */,
+				EFB61812261C63F100C39568 /* MasonryViewController.m in Sources */,
+				EF8E048126317F0F00F8AD8D /* TKSDWeakProxy.m in Sources */,
+				EF5864B5260ED07900405197 /* Person.m in Sources */,
 				EF5864A3260ECED600405197 /* main.m in Sources */,
+				EF1CE53F2623D9570069A459 /* GDPerson.m in Sources */,
 				EF586495260ECED500405197 /* SceneDelegate.m in Sources */,
+				EFC0B84C261DA5C400900242 /* TestBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,12 +516,14 @@
 		};
 		EF5864A7260ECED600405197 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5920A0D94DFA8A78C55B5437 /* Pods-Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J728CF59H2;
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,12 +536,14 @@
 		};
 		EF5864A8260ECED600405197 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C22B3B87E3710AB3F03BF412 /* Pods-Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J728CF59H2;
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
