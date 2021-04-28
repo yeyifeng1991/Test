@@ -18,6 +18,7 @@
     // Override point for customization after application launch.
 //     启动函数
 //     dev启动函数
+//    dev1 启动+1
     return YES;
 }
 
