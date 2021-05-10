@@ -16,14 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self initTableView];
     
 //    self.superLabel.text = @"父类lablel";
 //    self.superLabel1.text = @"父类lablel1";
 //    self.superLabel2.text = @"父类lablel2";
 //    [self subClick];
-//    self.tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    self.tableView.dataSource = self;
-//    [self.view addSubview:self.tableView];
+
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        
@@ -34,6 +33,12 @@
 //+(void)subClick{
 //    NSLog(@"当前类的类方法方法接收到");
 //}
+- (void)initTableView {
+        self.tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        self.tableView.dataSource = self;
+        [self.view addSubview:self.tableView];
+}
+
 - (void)subClick{
     NSLog(@"父类实现子类方法");
 }

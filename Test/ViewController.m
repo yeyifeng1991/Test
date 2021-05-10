@@ -8,6 +8,17 @@
 #import "ViewController.h"
 #import "TestBaseViewController+Beauty.h"
 #import "TKSDWeakProxy.h"
+#import "FMAudioMicViewController.h" // 音视频录制
+#import "FillCodeViewController.h"
+#import "PhotoSelectViewController.h" // 图像选择
+#import "PieChartViewController.h" // 饼状图
+#import "TestDownLoadViewController.h"
+#import "RunLoopViewController.h"
+#import "MyThread.h"
+#import "ScanViewController.h" // 文档查阅
+
+
+
 
 
 #import "TestOneViewController.h"
@@ -18,6 +29,7 @@
 #import "Masonry.h"
 #import "TestShared.h" //  单例使用
 #import "GDPerson.h" // 内存考察
+#import "testMarco.h"
 
 
 #define TK_Share [TestShared shareInstance]
@@ -62,6 +74,8 @@
 @property (nonatomic, strong) NSTimer * oneTimer;
 @property (nonatomic, strong) NSTimer * twoTimer;
 
+
+
 //拖动进来时的状态
 
 
@@ -74,6 +88,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+ 
+    [self addAudioBtn];
+//    self.dataArray = [NSMutableArray array];
+//    for (int i = 0; i< 10; i++) {
+//        [self.dataArray addObject:[NSString stringWithFormat:@"%d",i]];
+//
+//    }
+//    [self.tableView reloadData];
+   
+
+//    [self memoryIsa]; // 内存相关
+    
+//     po [self.view recursiveDescription]
+}
+
+
+- (void)testDemo {
     self.isShow = NO;
     NSString * str = self.isShow?@"真":@"假";
     _oneTimer = [self getTimerWithSel:@selector(timerCountOne)];
@@ -128,11 +160,8 @@
         });
     });
 
-
-//    [self memoryIsa]; // 内存相关
-    
-//     po [self.view recursiveDescription]
 }
+
 - (void)setTwoTimer:(NSTimer *)twoTimer{
     NSLog(@"TwoTimerset方法调用");
 }
@@ -327,10 +356,10 @@
     
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    self.presenter.name = @"Test";
-    
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+//{
+//    self.presenter.name = @"Test";
+//
 //    NSLog(@"VC中 == %ld",_share.testCount);
 //    [_share caculate];
 //    NSLog(@"VC中 == 计算过后%ld %@",TK_Share.testCount,TK_Share);
@@ -351,20 +380,15 @@
 //
 //    NSLog(@"self.tView 的隐藏属性 == %@",NSStringFromCGRect(self.tView.bounds));
     
-    NSLog(@"%s",__func__);
-    
-}
+//    NSLog(@"%s",__func__);
+//
+//}
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"name"]) {
         NSLog(@"keypath====%@",keyPath);
         NSLog(@"change=====%@",change);
 
     }
-}
-
-- (void)test
-{
-    NSLog(@"3");
 }
 
 - (void)setupViews{
@@ -467,6 +491,95 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return  self.dataArray.count;
+}
+
+#pragma mark - 音视频录制播放
+- (void)addAudioBtn {
+    UIButton *Btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn.frame = CGRectMake(100,100, 100, 30);
+    Btn.backgroundColor = [UIColor redColor];
+    [Btn setTitle:@"录音跳转" forState:0];
+    [Btn setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn];
+    [Btn addTarget:self action:@selector(BtnAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIButton *Btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn1.frame = CGRectMake(100, 150, 100, 30);
+    Btn1.backgroundColor = [UIColor redColor];
+    [Btn1 setTitle:@"验证码" forState:0];
+    [Btn1 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn1];
+    [Btn1 addTarget:self action:@selector(smsClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *Btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn2.frame = CGRectMake(100, 200, 100, 30);
+    Btn2.backgroundColor = [UIColor redColor];
+    [Btn2 setTitle:@"图像选择" forState:0];
+    [Btn2 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn2];
+    [Btn2 addTarget:self action:@selector(photoSelectClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *Btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn3.frame = CGRectMake(100, 250, 100, 30);
+    Btn3.backgroundColor = [UIColor redColor];
+    [Btn3 setTitle:@"饼状图" forState:0];
+    [Btn3 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn3];
+    [Btn3 addTarget:self action:@selector(pieVCClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *Btn4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn4.frame = CGRectMake(100, 250, 100, 30);
+    Btn4.backgroundColor = [UIColor redColor];
+    [Btn4 setTitle:@"断点下载" forState:0];
+    [Btn4 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn4];
+    [Btn4 addTarget:self action:@selector(downLoadResumeClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIButton *Btn5 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn5.frame = CGRectMake(100, 300, 100, 30);
+    Btn5.backgroundColor = [UIColor redColor];
+    [Btn5 setTitle:@"文档查阅" forState:0];
+    [Btn5 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn5];
+    [Btn5 addTarget:self action:@selector(ScanClick) forControlEvents:UIControlEventTouchUpInside];
+}
+- (void)BtnAction{
+    
+    FMAudioMicViewController *vc = [[FMAudioMicViewController alloc]init];
+//    [self presentViewController:vc animated:YES completion:nil];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
+- (void)smsClick{
+    NSLog(@"点击了跳转");
+    
+    FillCodeViewController *vc = [[FillCodeViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
+- (void)photoSelectClick{
+    PhotoSelectViewController *vc = [[PhotoSelectViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
+- (void)pieVCClick {
+    PieChartViewController * pieVC = [PieChartViewController new];
+    [self.navigationController pushViewController:pieVC animated:YES];
+}
+
+- (void)downLoadResumeClick {
+    TestDownLoadViewController * pieVC = [TestDownLoadViewController new];
+    [self.navigationController pushViewController:pieVC animated:YES];
+}
+- (void)ScanClick {
+    ScanViewController * pieVC = [ScanViewController new];
+    [self.navigationController pushViewController:pieVC animated:YES];
 }
 
 @end

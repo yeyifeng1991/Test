@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestDownLoadViewController">
+            <connections>
+                <outlet property="view" destination="iwM-j9-5jK" id="oTK-PY-IW1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iwM-j9-5jK">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpD-12-SRi">
+                    <rect key="frame" x="106.5" y="54" width="201" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="201" id="Utc-JK-hFM"/>
+                        <constraint firstAttribute="height" constant="30" id="aU8-hk-gmI"/>
+                    </constraints>
+                    <state key="normal" title="NSData方式下载(小文件)"/>
+                    <connections>
+                        <action selector="NSDataDownloadSmallFileBtnClicked:" destination="-1" eventType="touchUpInside" id="gce-yT-szy"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFp-am-iat" userLabel="分割线">
+                    <rect key="frame" x="0.0" y="94" width="414" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="NS0-Zv-6SN"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lag-MK-axW">
+                    <rect key="frame" x="69" y="154" width="276" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="276" id="Bgt-9a-l7Z"/>
+                        <constraint firstAttribute="height" constant="30" id="sJT-NA-Nb8"/>
+                    </constraints>
+                    <state key="normal" title="NSURLConnection方式下载(大文件)"/>
+                    <connections>
+                        <action selector="NSURLConnectionDownloadBigFileBtnClicked:" destination="-1" eventType="touchUpInside" id="ywp-Kq-3eD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOI-Sf-ZXM">
+                    <rect key="frame" x="69" y="104" width="276" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="276" id="1Kk-ap-FOw"/>
+                        <constraint firstAttribute="height" constant="30" id="rbE-wP-T4u"/>
+                    </constraints>
+                    <state key="normal" title="NSURLConnection方式下载(小文件)"/>
+                    <connections>
+                        <action selector="NSURLConnectionDownloadSmallFileBtnClicked:" destination="-1" eventType="touchUpInside" id="tx1-Ja-IMh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PP-iG-nZS">
+                    <rect key="frame" x="58.5" y="204" width="297" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="297" id="NlG-Ef-k8J"/>
+                        <constraint firstAttribute="height" constant="30" id="fHm-sX-QR3"/>
+                    </constraints>
+                    <state key="normal" title=" NSURLConnection（断点下载 | 支持离线）"/>
+                    <connections>
+                        <action selector="NSURLConnectionResumeDownloadFileBtnClicked:" destination="-1" eventType="touchUpInside" id="sU8-Vf-IjJ"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uO-GA-PZH" userLabel="分割线">
+                    <rect key="frame" x="0.0" y="244" width="414" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="nIi-hi-xtm"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSE-RA-WbX">
+                    <rect key="frame" x="83" y="254" width="248" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0Av-0b-oXt"/>
+                        <constraint firstAttribute="width" constant="248" id="gr1-rd-sen"/>
+                    </constraints>
+                    <state key="normal" title="NSURLSession的Block方法下载"/>
+                    <connections>
+                        <action selector="NSURLSessionBlockDownloadFileBtnClicked:" destination="-1" eventType="touchUpInside" id="XAQ-x1-rb1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVM-h3-oOb">
+                    <rect key="frame" x="71.5" y="304" width="271" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="dF7-Sx-NiJ"/>
+                        <constraint firstAttribute="width" constant="271" id="vTU-rT-rxC"/>
+                    </constraints>
+                    <state key="normal" title="NSURLSession的Delegate方法下载"/>
+                    <connections>
+                        <action selector="NSURLSessionDelegateDownloadFileBtnClicked:" destination="-1" eventType="touchUpInside" id="gaQ-Or-rrk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSM-uf-Um7">
+                    <rect key="frame" x="50" y="354" width="314" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="314" id="b1f-eB-UjN"/>
+                        <constraint firstAttribute="height" constant="30" id="jaT-n8-E44"/>
+                    </constraints>
+                    <state key="normal" title="NSURLSession（断点下载 | 不支持离线）"/>
+                    <connections>
+                        <action selector="NSURLSessionResumeDownloadFileBtnClicked:" destination="-1" eventType="touchUpInside" id="I6L-oH-fm7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe6-13-fZc">
+                    <rect key="frame" x="57.5" y="404" width="299" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="H34-nN-8ng"/>
+                        <constraint firstAttribute="width" constant="299" id="qw7-QY-RB1"/>
+                    </constraints>
+                    <state key="normal" title="NSURLSession（断点下载 | 支持离线）"/>
+                    <connections>
+                        <action selector="NSURLSessionOfflineResumeDownloadFileBtnClicked:" destination="-1" eventType="touchUpInside" id="6Th-ZE-tgm"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AB5-ee-ORM" userLabel="分割线">
+                    <rect key="frame" x="0.0" y="444" width="414" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="abN-W2-178"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-uV-aAN">
+                    <rect key="frame" x="97" y="455" width="220" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="d5a-zX-yfp"/>
+                        <constraint firstAttribute="width" constant="220" id="rN5-CV-roS"/>
+                    </constraints>
+                    <state key="normal" title="AFNetworking方式下载文件"/>
+                    <connections>
+                        <action selector="AFNetworkingDownloadFileBtnClicked:" destination="-1" eventType="touchUpInside" id="90t-LV-LIv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLh-gU-95M">
+                    <rect key="frame" x="60.5" y="505" width="293" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="AVP-rf-YuB"/>
+                        <constraint firstAttribute="width" constant="293" id="Yvv-08-p67"/>
+                    </constraints>
+                    <state key="normal" title="AFNetworking（断点下载 | 支持离线）"/>
+                    <connections>
+                        <action selector="AFNetworkingOfflineResumeDownloadFileBtnClicked:" destination="-1" eventType="touchUpInside" id="agj-FB-JhH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ple-LJ-zJr"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7uO-GA-PZH" firstAttribute="leading" secondItem="iwM-j9-5jK" secondAttribute="leading" id="1Lg-ci-5rH"/>
+                <constraint firstItem="9PP-iG-nZS" firstAttribute="top" secondItem="Lag-MK-axW" secondAttribute="bottom" constant="20" id="4h7-MP-J5V"/>
+                <constraint firstItem="a0c-uV-aAN" firstAttribute="top" secondItem="AB5-ee-ORM" secondAttribute="bottom" constant="10" id="5pc-Sr-kTQ"/>
+                <constraint firstItem="NVM-h3-oOb" firstAttribute="centerX" secondItem="iwM-j9-5jK" secondAttribute="centerX" id="7pf-g3-fvY"/>
+                <constraint firstItem="CSM-uf-Um7" firstAttribute="top" secondItem="NVM-h3-oOb" secondAttribute="bottom" constant="20" id="9FL-eE-Iol"/>
+                <constraint firstItem="HOI-Sf-ZXM" firstAttribute="top" secondItem="jpD-12-SRi" secondAttribute="bottom" constant="20" id="AFJ-ih-Nnn"/>
+                <constraint firstItem="7uO-GA-PZH" firstAttribute="top" secondItem="9PP-iG-nZS" secondAttribute="bottom" constant="10" id="BMe-sl-Md6"/>
+                <constraint firstItem="Oe6-13-fZc" firstAttribute="centerX" secondItem="iwM-j9-5jK" secondAttribute="centerX" id="DSg-wr-2jj"/>
+                <constraint firstAttribute="trailing" secondItem="AB5-ee-ORM" secondAttribute="trailing" id="IzV-XF-ZaA"/>
+                <constraint firstItem="LSE-RA-WbX" firstAttribute="top" secondItem="9PP-iG-nZS" secondAttribute="bottom" constant="20" id="Kel-UF-9WP"/>
+                <constraint firstItem="Lag-MK-axW" firstAttribute="top" secondItem="HOI-Sf-ZXM" secondAttribute="bottom" constant="20" id="LxX-wz-zHo"/>
+                <constraint firstItem="a0c-uV-aAN" firstAttribute="centerX" secondItem="iwM-j9-5jK" secondAttribute="centerX" id="MdE-4E-WZS"/>
+                <constraint firstItem="Lag-MK-axW" firstAttribute="centerX" secondItem="iwM-j9-5jK" secondAttribute="centerX" id="OYO-06-efE"/>
+                <constraint firstItem="WLh-gU-95M" firstAttribute="centerX" secondItem="iwM-j9-5jK" secondAttribute="centerX" id="Xb7-NE-sVJ"/>
+                <constraint firstAttribute="trailing" secondItem="7uO-GA-PZH" secondAttribute="trailing" id="YIb-PY-KLK"/>
+                <constraint firstItem="HOI-Sf-ZXM" firstAttribute="centerX" secondItem="iwM-j9-5jK" secondAttribute="centerX" id="alk-Tb-Pqf"/>
+                <constraint firstItem="CSM-uf-Um7" firstAttribute="centerX" secondItem="iwM-j9-5jK" secondAttribute="centerX" id="amM-z0-scI"/>
+                <constraint firstItem="jpD-12-SRi" firstAttribute="centerX" secondItem="iwM-j9-5jK" secondAttribute="centerX" id="fie-v5-Fg4"/>
+                <constraint firstItem="9PP-iG-nZS" firstAttribute="centerX" secondItem="iwM-j9-5jK" secondAttribute="centerX" id="hm2-o8-GHn"/>
+                <constraint firstItem="bFp-am-iat" firstAttribute="leading" secondItem="iwM-j9-5jK" secondAttribute="leading" id="mit-pK-S8U"/>
+                <constraint firstAttribute="trailing" secondItem="bFp-am-iat" secondAttribute="trailing" id="pzK-Yf-LzQ"/>
+                <constraint firstItem="WLh-gU-95M" firstAttribute="top" secondItem="a0c-uV-aAN" secondAttribute="bottom" constant="20" id="q9D-fJ-Ojk"/>
+                <constraint firstItem="AB5-ee-ORM" firstAttribute="leading" secondItem="iwM-j9-5jK" secondAttribute="leading" id="qcf-Wh-ibU"/>
+                <constraint firstItem="bFp-am-iat" firstAttribute="top" secondItem="jpD-12-SRi" secondAttribute="bottom" constant="10" id="rPd-tM-rA7"/>
+                <constraint firstItem="jpD-12-SRi" firstAttribute="top" secondItem="ple-LJ-zJr" secondAttribute="top" constant="10" id="raM-Tr-8ZH"/>
+                <constraint firstItem="LSE-RA-WbX" firstAttribute="centerX" secondItem="iwM-j9-5jK" secondAttribute="centerX" id="riA-mW-gjW"/>
+                <constraint firstItem="AB5-ee-ORM" firstAttribute="top" secondItem="Oe6-13-fZc" secondAttribute="bottom" constant="10" id="sTI-C3-UOm"/>
+                <constraint firstItem="NVM-h3-oOb" firstAttribute="top" secondItem="LSE-RA-WbX" secondAttribute="bottom" constant="20" id="vaG-Ff-Z24"/>
+                <constraint firstItem="Oe6-13-fZc" firstAttribute="top" secondItem="CSM-uf-Um7" secondAttribute="bottom" constant="20" id="xTn-Hq-fS9"/>
+            </constraints>
+            <point key="canvasLocation" x="-120" y="-573"/>
+        </view>
+    </objects>
+</document>
