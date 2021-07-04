@@ -38,6 +38,8 @@ typedef void(^TextDidFinished)(NSString *codeStr);
                        TextAlignment:(NSTextAlignment)alignment
                         KeyboardType:(UIKeyboardType)keyboardType;
 
+- (void)setCodeText:(NSString*)text;
+
 
 
 @end

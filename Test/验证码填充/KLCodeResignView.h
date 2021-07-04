@@ -16,6 +16,7 @@ typedef void (^CodeResignUnCompleted)(NSString *content);
 @property (copy, nonatomic) CodeResignUnCompleted codeResignUnCompleted;
 
 - (instancetype) initWithCodeBits:(NSInteger)codeBits;
+- (void)setCodeText:(NSString*)text;
 @end
 
 NS_ASSUME_NONNULL_END

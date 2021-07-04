@@ -16,11 +16,15 @@
 #import "RunLoopViewController.h"
 #import "MyThread.h"
 #import "ScanViewController.h" // 文档查阅
-
-
-
-
-
+#import "TelephoneCodeViewController.h" // 获取国际区号
+#import "CountDownViewController.h" // 倒计时界面
+#import "StoreDataViewController.h"
+#import "UIButton+ImageAlignmentStyle.h"
+#import "LoadingBtnViewController.h" // 加载动画
+#import "TimerViewController.h" // 倒计时
+#import "AniViewController.h"
+#import "AudioVideoViewController.h" // 音视频录制播放
+#import "wechatViewController.h" // 图文混排
 #import "TestOneViewController.h"
 
 #import "TestView.h"
@@ -30,6 +34,8 @@
 #import "TestShared.h" //  单例使用
 #import "GDPerson.h" // 内存考察
 #import "testMarco.h"
+#import "CustomHeightViewController.h"
+
 
 
 #define TK_Share [TestShared shareInstance]
@@ -48,7 +54,7 @@
 #define TKDisMainAfter(disTime,block) dispatch_after(disTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){dispatch_async(dispatch_get_main_queue(), block);});
 
 
-@interface ViewController ()<PersonProtocol,UITableViewDataSource>
+@interface ViewController ()<PersonProtocol,UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) TestView * tView;
 @property (nonatomic, strong) Presenter * presenter;
@@ -88,8 +94,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+//    [self initTableView];
+    
    
- 
+    
     [self addAudioBtn];
 //    self.dataArray = [NSMutableArray array];
 //    for (int i = 0; i< 10; i++) {
@@ -103,7 +112,25 @@
     
 //     po [self.view recursiveDescription]
 }
+- (void)font {
+    UIFont *font1 = [UIFont systemFontOfSize:16];
+    UIFont *font2 = [UIFont boldSystemFontOfSize:16];
+    UIFont *font3 = [UIFont italicSystemFontOfSize:16];
 
+    UIFont *font4 = [UIFont systemFontOfSize:16 weight:UIFontWeightRegular];
+    UIFont *font5 = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
+    UIFont *font6 = [UIFont systemFontOfSize:16 weight:UIFontWeightSemibold];
+
+//打印：
+//<UICTFont: 0x10a91cbe0> font-family: ".SFUI-Regular"; font-weight: normal; font-style: normal; font-size: 16.00pt
+//<UICTFont: 0x10a930de0> font-family: ".SFUI-Semibold"; font-weight: bold; font-style: normal; font-size: 16.00pt
+//<UICTFont: 0x10a92f650> font-family: ".SFUI-RegularItalic"; font-weight: normal; font-style: italic; font-size: 16.00pt
+//
+//<UICTFont: 0x105a01f80> font-family: ".SFUI-Regular"; font-weight: normal; font-style: normal; font-size: 16.00pt
+//<UICTFont: 0x105943960> font-family: ".SFUI-Medium"; font-weight: normal; font-style: normal; font-size: 16.00pt
+//<UICTFont: 0x1059443c0> font-family: ".SFUI-Semibold"; font-weight: bold; font-st
+
+}
 
 - (void)testDemo {
     self.isShow = NO;
@@ -478,20 +505,20 @@
     }
     return  _userlistView;
 }
-
-- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell1"];
-    }
-    NSString * str = self.dataArray[indexPath.row];
-    cell.textLabel.text = str;
-    return  cell;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return  self.dataArray.count;
-}
+//
+//- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+//    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell1"];
+//    }
+//    NSString * str = self.dataArray[indexPath.row];
+//    cell.textLabel.text = str;
+//    return  cell;
+//}
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    return  self.dataArray.count;
+//}
 
 #pragma mark - 音视频录制播放
 - (void)addAudioBtn {
@@ -544,13 +571,77 @@
     [Btn5 setTitleColor:[UIColor whiteColor] forState:0];
     [self.view addSubview:Btn5];
     [Btn5 addTarget:self action:@selector(ScanClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *Btn6 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn6.frame = CGRectMake(100, 350, 100, 30);
+    Btn6.backgroundColor = [UIColor redColor];
+    [Btn6 setTitle:@"国际区号" forState:0];
+    [Btn6 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn6];
+    [Btn6 addTarget:self action:@selector(countryCodeClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIButton *Btn7 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn7.frame = CGRectMake(100, 400, 100, 30);
+    Btn7.backgroundColor = [UIColor redColor];
+    [Btn7 setTitle:@"信息存储" forState:0];
+    [Btn7 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn7];
+    [Btn7 addTarget:self action:@selector(storeClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *Btn8 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn8.frame = CGRectMake(100, 450, 100, 30);
+    Btn8.backgroundColor = [UIColor redColor];
+    [Btn8 setTitle:@"倒计时" forState:0];
+    [Btn8 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn8];
+    [Btn8 addTarget:self action:@selector(countDownClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIButton *Btn9 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn9.frame = CGRectMake(100, 500, 100, 30);
+    Btn9.backgroundColor = [UIColor redColor];
+    [Btn9 setTitle:@"加载动画" forState:0];
+    [Btn9 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn9];
+    [Btn9 addTarget:self action:@selector(loadingBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *Btn10 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn10.frame = CGRectMake(100, 550, 100, 30);
+    Btn10.backgroundColor = [UIColor redColor];
+    [Btn10 setTitle:@"动画" forState:0];
+    [Btn10 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn10];
+    [Btn10 addTarget:self action:@selector(aniBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *Btn11 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn11.frame = CGRectMake(100, 600, 200, 30);
+    Btn11.backgroundColor = [UIColor redColor];
+    [Btn11 setTitle:@"音视频录制播放" forState:0];
+    [Btn11 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn11];
+    [Btn11 addTarget:self action:@selector(avClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *Btn12 = [UIButton buttonWithType:UIButtonTypeCustom];
+    Btn12.frame = CGRectMake(100, 640, 100, 30);
+    Btn12.backgroundColor = [UIColor redColor];
+    [Btn12 setTitle:@"图文混排" forState:0];
+    [Btn12 setTitleColor:[UIColor whiteColor] forState:0];
+    [self.view addSubview:Btn12];
+    [Btn12 addTarget:self action:@selector(wechatClick) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)BtnAction{
     
-    FMAudioMicViewController *vc = [[FMAudioMicViewController alloc]init];
-//    [self presentViewController:vc animated:YES completion:nil];
+//    FMAudioMicViewController *vc = [[FMAudioMicViewController alloc]init];
+////    [self presentViewController:vc animated:YES completion:nil];
+//
+//    [self.navigationController pushViewController:vc animated:YES];
     
-    [self.navigationController pushViewController:vc animated:YES];
+    CustomHeightViewController *vc = [[CustomHeightViewController alloc]init];
+ ////    [self presentViewController:vc animated:YES completion:nil];
+ //
+     [self.navigationController pushViewController:vc animated:YES];
+    
     
 }
 
@@ -581,5 +672,181 @@
     ScanViewController * pieVC = [ScanViewController new];
     [self.navigationController pushViewController:pieVC animated:YES];
 }
+
+
+- (void)countryCodeClick {
+    TelephoneCodeViewController * pieVC = [TelephoneCodeViewController new];
+    [self.navigationController pushViewController:pieVC animated:YES];
+}
+
+- (void)storeClick {
+    StoreDataViewController * storeVC = [[StoreDataViewController alloc] init];
+    [self.navigationController pushViewController:storeVC animated:YES];
+
+}
+
+- (void)countDownClick {
+//    CountDownViewController * countDownVC = [[CountDownViewController alloc] init];
+//    [self.navigationController pushViewController:countDownVC animated:YES];
+    
+    
+    TimerViewController * timerVC =  [TimerViewController sharedInstance];
+    NSLog(@"B界面地址 push前 %p",timerVC);
+    [self.navigationController pushViewController:timerVC animated:YES];
+
+}
+
+- (void)loadingBtnClick {
+    LoadingBtnViewController * loadingVC = [[LoadingBtnViewController alloc] init];
+    [self.navigationController pushViewController:loadingVC animated:YES];
+}
+
+- (void)aniBtnClick{
+    [self.navigationController pushViewController:[AniViewController new] animated:YES];
+}
+- (void)avClick{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"av" bundle:[NSBundle mainBundle]];
+    AudioVideoViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"avVC"];
+    [self.navigationController pushViewController:loginViewController animated:YES];
+//    [self.navigationController pushViewController:[AudioVideoViewController new] animated:YES];
+}
+- (void)wechatClick{
+    [self.navigationController pushViewController:[wechatViewController new] animated:YES];
+}
+
+// table view
+
+- (void)initTableView
+{
+    
+    UITableView *lessonTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    lessonTableView.dataSource = self;
+    lessonTableView.delegate = self;
+//    lessonTableView.separatorColor = [UIColor clearColor];
+//    lessonTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:lessonTableView];
+  
+    
+}
+
+#pragma mark - Notification
+
+
+#pragma mark - Delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+   if(section == 0)
+   {
+       return 2;
+   }else if (section == 1)
+   {
+       return 3;
+   }else{
+       return 1;
+   }
+    
+  
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *lessonCell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!lessonCell) {
+        lessonCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    }
+    lessonCell.detailTextLabel.text = @"detali中国";
+    lessonCell.textLabel.text = @"text中国";
+    return lessonCell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0 ) {
+        return 55;
+    }
+    return 50;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 3;
+}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.section != 2) {
+        // 圆角角度
+        CGFloat radius = 10.f;
+        // 设置cell 背景色为透明
+        cell.backgroundColor = UIColor.clearColor;
+        // 创建两个layer
+        CAShapeLayer *normalLayer = [[CAShapeLayer alloc] init];
+        CAShapeLayer *selectLayer = [[CAShapeLayer alloc] init];
+        // 获取显示区域大小
+        CGRect bounds = CGRectInset(cell.bounds, 20, 0);
+        // cell的backgroundView
+        UIView *normalBgView = [[UIView alloc] initWithFrame:bounds];
+        // 获取每组行数
+        NSInteger rowNum = [tableView numberOfRowsInSection:indexPath.section];
+        // 贝塞尔曲线
+        UIBezierPath *bezierPath = nil;
+        
+        if (rowNum == 1) {
+            // 一组只有一行（四个角全部为圆角）
+            bezierPath = [UIBezierPath bezierPathWithRoundedRect:bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(radius, radius)];
+            normalBgView.clipsToBounds = NO;
+        }else {
+            normalBgView.clipsToBounds = YES;
+            if (indexPath.row == 0) {
+                normalBgView.frame = UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(-5, 0, 0, 0));
+                CGRect rect = UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(5, 0, 0, 0));
+                // 每组第一行（添加左上和右上的圆角）
+                bezierPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:(UIRectCornerTopLeft|UIRectCornerTopRight) cornerRadii:CGSizeMake(radius, radius)];
+            }else if (indexPath.row == rowNum - 1) {
+                normalBgView.frame = UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, 0, -5, 0));
+                CGRect rect = UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, 0, 5, 0));
+                // 每组最后一行（添加左下和右下的圆角）
+                bezierPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight) cornerRadii:CGSizeMake(radius, radius)];
+            }else {
+                // 每组不是首位的行不设置圆角
+                bezierPath = [UIBezierPath bezierPathWithRect:bounds];
+            }
+        }
+        
+        // 阴影
+        if (indexPath.section != 2) {
+            normalLayer.shadowColor = [UIColor blackColor].CGColor;
+            normalLayer.shadowOpacity = 0.2;
+            normalLayer.shadowOffset = CGSizeMake(0, 0);
+            normalLayer.path = bezierPath.CGPath;
+            normalLayer.shadowPath = bezierPath.CGPath;
+        }
+
+        
+        // 把已经绘制好的贝塞尔曲线路径赋值给图层，然后图层根据path进行图像渲染render
+        normalLayer.path = bezierPath.CGPath;
+        selectLayer.path = bezierPath.CGPath;
+        
+        // 设置填充颜色
+        normalLayer.fillColor = [UIColor whiteColor].CGColor;
+        // 添加图层到nomarBgView中
+        [normalBgView.layer insertSublayer:normalLayer atIndex:0];
+        normalBgView.backgroundColor = UIColor.clearColor;
+        cell.backgroundView = normalBgView;
+        
+        // 替换cell点击效果
+        UIView *selectBgView = [[UIView alloc] initWithFrame:bounds];
+        selectLayer.fillColor = [UIColor colorWithWhite:0.95 alpha:1.0].CGColor;
+        [selectBgView.layer insertSublayer:selectLayer atIndex:0];
+        selectBgView.backgroundColor = UIColor.clearColor;
+        cell.selectedBackgroundView = selectBgView;
+//    }
+
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+
 
 @end

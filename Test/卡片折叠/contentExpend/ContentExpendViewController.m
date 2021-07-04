@@ -10,7 +10,7 @@
 #import "NewsCell.h"
 #import "NewsModel.h"
 #import "UITableView+FDTemplateLayoutCell.h"
-#import <YYModel/YYModel.h>
+//#import <YYModel/YYModel.h>
 
 static NSString *NewsCellIdentifier = @"newsCellIdentifier";
 
@@ -57,7 +57,7 @@ static NSString *NewsCellIdentifier = @"newsCellIdentifier";
     
     NSData *jsonData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"newsData" ofType:@"json"]];
     // YYModel字典转模型
-    self.newsDataArray = [NSArray yy_modelArrayWithClass:[NewsModel class] json:jsonData];
+//    self.newsDataArray = [NSArrary yy_modelArrayWithClass:[NewsModel class] json:jsonData];
 }
 
 

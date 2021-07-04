@@ -6,6 +6,7 @@
 //
 
 #import "KLCodeResignView.h"
+#import "WDTextField.h"
 
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 //自定义 验证码展示视图 view，由一个label和一个下划线组成
@@ -14,13 +15,15 @@
 @property (strong, nonatomic) NSString *text;
 @property (strong, nonatomic) UILabel *codeLabel;
 @property (strong, nonatomic) UIView *lineView;
+@property (nonatomic,strong)  CAShapeLayer  * aniLine; // 动画line
+
 
 @end
 
 
-@interface KLCodeResignView () <UITextFieldDelegate>
+@interface KLCodeResignView () <UITextFieldDelegate,WDTextFieldDelegate>
 
-@property (strong, nonatomic) UITextField *contentF; //监听内容输入
+@property (strong, nonatomic) WDTextField *contentF; //监听内容输入
 @property (strong, nonatomic) NSArray<KLCodeView *> *codeViewsArr;//显示输入内容的codeView数组
 @property (assign, nonatomic) NSInteger currIndex;//当前待输入的codeView的下标
 
@@ -37,7 +40,7 @@
     if (self) {
         //验证码默认是4位
         if (self.codeBits < 1) {
-            self.codeBits = 4;
+            self.codeBits = 6;
         }
         WEAKSELF
         [self addSubview:self.contentF];
@@ -47,10 +50,38 @@
         
         for(NSInteger i = 0; i < self.codeBits; i++) {
             KLCodeView *codeView = self.codeViewsArr[i];
+//            if (i == 0) {
+//                codeView.aniLine.hidden = NO;
+//                [codeView.aniLine addAnimation:[self opacityAnimation] forKey:@"kOpacityAnimation"];
+//            }
             [self addSubview:codeView];
         }
+       
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow)  name:UIKeyboardDidShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide)  name:UIKeyboardWillHideNotification object:nil];
+
     }
     return self;
+}
+- (CABasicAnimation *)opacityAnimation {
+    CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    opacityAnimation.fromValue = @(1.0);
+    opacityAnimation.toValue = @(0.0);
+    opacityAnimation.duration = 0.9;
+    opacityAnimation.repeatCount = HUGE_VALF;
+    opacityAnimation.removedOnCompletion = YES;
+    opacityAnimation.fillMode = kCAFillModeForwards;
+    opacityAnimation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    return opacityAnimation;
+}
+
+- (void)keyboardDidHide
+{
+    NSLog(@"键盘下落");
+}
+- (void)keyboardDidShow
+{
+    NSLog(@"键盘显示");
 }
 
 - (void)layoutSubviews {
@@ -76,17 +107,17 @@
         [textField resignFirstResponder];
         return NO;
     }
-    //删除 操作
+//    //删除 操作
     if ([string isEqualToString:@""]) {
-        if (self.currIndex == 0) {//待输入的下标为0时 删除时下标不变化，否则下标减1
-            self.codeViewsArr[self.currIndex].text = string;
-        } else {
-            self.codeViewsArr[--self.currIndex].text = string;
-            if (self.codeResignUnCompleted) {
-                NSString *content = [textField.text substringToIndex:self.currIndex];
-                self.codeResignUnCompleted(content);
-            }
-        }
+//        if (self.currIndex == 0) {//待输入的下标为0时 删除时下标不变化，否则下标减1
+//            self.codeViewsArr[self.currIndex].text = string;
+//        } else {
+//            self.codeViewsArr[--self.currIndex].text = string;
+//            if (self.codeResignUnCompleted) {
+//                NSString *content = [textField.text substringToIndex:self.currIndex];
+//                self.codeResignUnCompleted(content);
+//            }
+//        }
         return YES;
     }
     //判断 输入的是否是纯数字，不是纯数字 输入无效
@@ -98,6 +129,7 @@
         return NO;
     }
     //输入的数字，则当前待输入的下标对应的 view中添加输入的数字，并且下标加1
+//    TODO:- 重点
     self.codeViewsArr[self.currIndex++].text = string;
     //当当前待输入的下标为codebits时表示已经输入了对应位数的验证码，执行完成操作
     if (self.currIndex == self.codeBits && self.codeResignCompleted) {
@@ -112,10 +144,40 @@
     
     return YES;
 }
+- (void)setCodeText:(NSString*)text;
+{
+    NSMutableArray * array = [self stringArray:text];
+    
+    if (text.length != 1) {
+//  遍历赋值
+        for (NSString  * str  in  array) {
+            self.codeViewsArr[self.currIndex++].text = str;
+        }
+//
+        if (text.length == self.codeBits && self.codeResignCompleted) // 自动填充密码 数 为 6位时
+        {
+    //        [textField resignFirstResponder];
+            self.codeResignCompleted(text);
+        }
+
+    }
+}
+
+- (NSMutableArray*)stringArray:(NSString*)text {
+    NSString *temp =nil;
+    NSMutableArray * array = [NSMutableArray array];
+      for(int i =0; i < [text length]; i++)
+      {
+          temp = [text substringWithRange:NSMakeRange(i,1)];
+          [array addObject:temp];
+      }
+    return array;
+}
 
 - (UITextField *)contentF {
     if (!_contentF) {
-        _contentF = [[UITextField alloc] init];
+        _contentF = [[WDTextField alloc] init];
+        _contentF.wd_delegate = self;
         //背景颜色和字体颜色都设置为透明的，这样在界面上就看不到
         _contentF.backgroundColor = [UIColor clearColor];
         _contentF.textColor = [UIColor clearColor];
@@ -127,11 +189,32 @@
     return _contentF;
 }
 
+- (void)wd_textFieldDeleteBackward:(WDTextField *)textField
+{
+    NSLog(@"文本框输入的值 == %@",textField);
+//    NSString * string = [textField.text substringFromIndex:[textField.text length]-1];
+        if (self.currIndex == 0) {//待输入的下标为0时 删除时下标不变化，否则下标减1
+            self.codeViewsArr[self.currIndex].text = @"";
+        } else {
+            self.codeViewsArr[--self.currIndex].text = @"";
+            if (self.codeResignUnCompleted) {
+                NSString *content = [textField.text substringToIndex:self.currIndex];
+                self.codeResignUnCompleted(content);
+            }
+        }
+       
+}
+
+
 - (NSArray<KLCodeView *> *)codeViewsArr {
     if (!_codeViewsArr) {
         NSMutableArray *arr = [NSMutableArray array];
         for (NSInteger i = 0; i < self.codeBits; i++) {
             KLCodeView *codeView = [[KLCodeView alloc] init];
+            if (i == 0) {
+                codeView.aniLine.hidden = NO;
+               [codeView.aniLine addAnimation:[self opacityAnimation] forKey:@"kOpacityAnimation"];
+            }
             [arr addObject:codeView];
         }
         _codeViewsArr = [NSArray arrayWithArray:arr];
@@ -145,6 +228,13 @@
     int val;
     return [scan scanInt:&val] && [scan isAtEnd];
 }
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+
 
 @end
 
@@ -190,6 +280,34 @@
             make.bottom.left.right.mas_equalTo(weakSelf).mas_offset(0.0f);
             make.height.mas_equalTo(2.0f);
         }];
+       
+//        TODO:- 添加lineview
+        // 0.1秒后获取frame， 设置为0秒也可以获取，具体参考链接
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"当前view = %@",self);
+            CGRect rect = CGRectMake((CGRectGetHeight(self.frame)-2)/2,5,1,(CGRectGetHeight(self.frame)-10));
+            UIBezierPath *path = [UIBezierPath bezierPathWithRect:rect];
+            CAShapeLayer *line = [CAShapeLayer layer];
+            line.path = path.CGPath;
+            line.fillColor =  [UIColor cyanColor].CGColor;
+            [self.layer addSublayer:line];
+            self.aniLine = line;
+            self.aniLine.hidden = YES;
+//            if (i == 0) {//初始化第一个view为选择状态
+//                [line addAnimation:[self opacityAnimation] forKey:@"kOpacityAnimation"];
+//                line.hidden = NO;
+//                subView.borderColor = _viewColorHL;
+//            }else{
+//                line.hidden = YES;
+//                subView.borderColor = _viewColor;
+//            }
+            
+        });
+     
+
+        
+        
+        
     }
     return self;
 }
@@ -204,6 +322,31 @@
     }
 }
 
+- (void)changeViewLayerIndex:(NSInteger)index pointHidden:(BOOL)hidden{
+    
+//    UIView *view = self.codeViewsArr[index];
+//    view.borderColor = hidden?_viewColor:_viewColorHL;
+//    CAShapeLayer *line =self.pointlineArr[index];
+//    if (hidden) {
+//        [line removeAnimationForKey:@"kOpacityAnimation"];
+//    }else{
+//        [line addAnimation:[self opacityAnimation] forKey:@"kOpacityAnimation"];
+//    }
+//    line.hidden = hidden;
+
+}
+
+- (CABasicAnimation *)opacityAnimation {
+    CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    opacityAnimation.fromValue = @(1.0);
+    opacityAnimation.toValue = @(0.0);
+    opacityAnimation.duration = 0.9;
+    opacityAnimation.repeatCount = HUGE_VALF;
+    opacityAnimation.removedOnCompletion = YES;
+    opacityAnimation.fillMode = kCAFillModeForwards;
+    opacityAnimation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    return opacityAnimation;
+}
 
 @end
 

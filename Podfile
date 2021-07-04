@@ -17,6 +17,7 @@ target 'Test' do
 #  pod 'MBProgressHUD', '~> 1.0.0'
   pod 'UITableView+FDTemplateLayoutCell'
 #      pod 'MJExtension'
-  pod 'YYModel'
+#  pod 'YYModel'
+#  pod 'YYKit'
 end
 

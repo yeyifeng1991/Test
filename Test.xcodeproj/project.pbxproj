@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6DC01F3A7C4D8DB1B96CEFB2 /* libPods-Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F86BD6B0DCB0D47DB4F9C104 /* libPods-Test.a */; };
+		EF10B91A264A65DB0000A5A4 /* TheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EF10B919264A65DB0000A5A4 /* TheObject.m */; };
+		EF10B93A264A86A00000A5A4 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = EF10B939264A86A00000A5A4 /* UILabel+ChangeLineSpaceAndWordSpace.m */; };
+		EF10B950264AA72B0000A5A4 /* UIButton+ImageAlignmentStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = EF10B94F264AA72B0000A5A4 /* UIButton+ImageAlignmentStyle.m */; };
 		EF1CE53F2623D9570069A459 /* GDPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CE53E2623D9570069A459 /* GDPerson.m */; };
 		EF1CE55B262684630069A459 /* TestBaseViewController+Beauty.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CE55A262684630069A459 /* TestBaseViewController+Beauty.m */; };
 		EF1CE5602626DB500069A459 /* TestSuperBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1CE55F2626DB500069A459 /* TestSuperBaseViewController.m */; };
@@ -54,9 +57,24 @@
 		EF5864B5260ED07900405197 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5864B4260ED07900405197 /* Person.m */; };
 		EF5864B9260ED0F300405197 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5864B8260ED0F300405197 /* Presenter.m */; };
 		EF5864BD260ED20C00405197 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5864BC260ED20C00405197 /* TestView.m */; };
+		EF5C74A02653D1C000968FA7 /* WDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5C749F2653D1C000968FA7 /* WDTextField.m */; };
+		EF5D5B21266C60660039B371 /* AniViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5D5B1F266C60660039B371 /* AniViewController.m */; };
+		EF5D5B22266C60660039B371 /* AniViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5D5B20266C60660039B371 /* AniViewController.xib */; };
 		EF61ECBB264512F700BDFA2A /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF61ECB9264512F700BDFA2A /* CalendarViewController.m */; };
 		EF61ECBC264512F700BDFA2A /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF61ECBA264512F700BDFA2A /* CalendarViewController.xib */; };
+		EF7D90B1268C9F4700EFC040 /* CustomHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7D90AF268C9F4700EFC040 /* CustomHeightViewController.m */; };
+		EF7D90B2268C9F4700EFC040 /* CustomHeightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF7D90B0268C9F4700EFC040 /* CustomHeightViewController.xib */; };
+		EF7D90B5268C9FD900EFC040 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7D90B4268C9FD900EFC040 /* CustomView.m */; };
 		EF8E048126317F0F00F8AD8D /* TKSDWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8E047F26317F0E00F8AD8D /* TKSDWeakProxy.m */; };
+		EF90650426705B15000921DE /* AudioVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF90650226705B15000921DE /* AudioVideoViewController.m */; };
+		EF90650B26705B74000921DE /* wechatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF90650926705B74000921DE /* wechatViewController.m */; };
+		EF90650C26705B74000921DE /* wechatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF90650A26705B74000921DE /* wechatViewController.xib */; };
+		EF90651126706C93000921DE /* av.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF90651026706C93000921DE /* av.storyboard */; };
+		EF90651C26706EEA000921DE /* TTImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF90651726706EEA000921DE /* TTImagePickerController.m */; };
+		EF90651D26706EEA000921DE /* TTSimplePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF90651A26706EEA000921DE /* TTSimplePlayViewController.m */; };
+		EF90651E26706EEA000921DE /* TTRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF90651B26706EEA000921DE /* TTRecordViewController.m */; };
+		EF9B79E7266386E10053FFDE /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9B79E5266386E10053FFDE /* TimerViewController.m */; };
+		EF9B79E8266386E10053FFDE /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9B79E6266386E10053FFDE /* TimerViewController.xib */; };
 		EFB2C0F126451DF800B90B9B /* RangePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2C0D526451DF600B90B9B /* RangePickerCell.m */; };
 		EFB2C0F226451DF800B90B9B /* StoryboardExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2C0D626451DF600B90B9B /* StoryboardExampleViewController.m */; };
 		EFB2C0F326451DF800B90B9B /* HidePlaceholderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2C0D726451DF600B90B9B /* HidePlaceholderViewController.m */; };
@@ -223,16 +241,36 @@
 		EFB2C444264692DE00B90B9B /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2C43D264692DE00B90B9B /* NewsCell.m */; };
 		EFB2C445264692DE00B90B9B /* newsData.json in Resources */ = {isa = PBXBuildFile; fileRef = EFB2C43E264692DE00B90B9B /* newsData.json */; };
 		EFB2C446264692DE00B90B9B /* ContentExpendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2C440264692DE00B90B9B /* ContentExpendViewController.m */; };
+		EFB2C451264939F500B90B9B /* TelephoneCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2C44F264939F500B90B9B /* TelephoneCodeViewController.m */; };
+		EFB2C452264939F500B90B9B /* TelephoneCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB2C450264939F500B90B9B /* TelephoneCodeViewController.xib */; };
+		EFB2C465264A1C6B00B90B9B /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2C463264A1C6B00B90B9B /* CountDownViewController.m */; };
+		EFB2C466264A1C6B00B90B9B /* CountDownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB2C464264A1C6B00B90B9B /* CountDownViewController.xib */; };
+		EFB2C46C264A1CB900B90B9B /* StoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2C46A264A1CB900B90B9B /* StoreDataViewController.m */; };
+		EFB2C46D264A1CB900B90B9B /* StoreDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB2C46B264A1CB900B90B9B /* StoreDataViewController.xib */; };
+		EFB2C471264A1CD300B90B9B /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2C470264A1CD300B90B9B /* UserData.m */; };
+		EFB2C47C264A36CB00B90B9B /* TestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB2C47B264A36CB00B90B9B /* TestManager.m */; };
 		EFB618072617291E00C39568 /* AudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB618062617291E00C39568 /* AudioViewController.m */; };
 		EFB61812261C63F100C39568 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB61811261C63F100C39568 /* MasonryViewController.m */; };
 		EFC0B84C261DA5C400900242 /* TestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC0B84B261DA5C400900242 /* TestBaseViewController.m */; };
 		EFC0B852261DAA3500900242 /* TestOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC0B851261DAA3500900242 /* TestOneViewController.m */; };
 		EFC0B858261ED9EB00900242 /* TestShared.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC0B857261ED9EB00900242 /* TestShared.m */; };
+		EFD65D1A268729F600321346 /* RemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD65D18268729F600321346 /* RemarkViewController.m */; };
+		EFD65D1B268729F600321346 /* RemarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFD65D19268729F600321346 /* RemarkViewController.xib */; };
+		EFD6AD99264CB595006912CA /* IANActivityIndicatorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD6AD93264CB594006912CA /* IANActivityIndicatorButton.m */; };
+		EFD6AD9A264CB595006912CA /* LoadingBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD6AD95264CB594006912CA /* LoadingBtnViewController.m */; };
+		EFD6AD9B264CB595006912CA /* UIButton+IANActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD6AD98264CB594006912CA /* UIButton+IANActivityView.m */; };
+		EFD6AD9F264CBAB3006912CA /* UIControl+Limit.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD6AD9E264CBAB3006912CA /* UIControl+Limit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5920A0D94DFA8A78C55B5437 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		C22B3B87E3710AB3F03BF412 /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
+		EF10B918264A65DB0000A5A4 /* TheObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TheObject.h; sourceTree = "<group>"; };
+		EF10B919264A65DB0000A5A4 /* TheObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheObject.m; sourceTree = "<group>"; };
+		EF10B938264A86A00000A5A4 /* UILabel+ChangeLineSpaceAndWordSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeLineSpaceAndWordSpace.h"; sourceTree = "<group>"; };
+		EF10B939264A86A00000A5A4 /* UILabel+ChangeLineSpaceAndWordSpace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ChangeLineSpaceAndWordSpace.m"; sourceTree = "<group>"; };
+		EF10B94E264AA72B0000A5A4 /* UIButton+ImageAlignmentStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageAlignmentStyle.h"; sourceTree = "<group>"; };
+		EF10B94F264AA72B0000A5A4 /* UIButton+ImageAlignmentStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageAlignmentStyle.m"; sourceTree = "<group>"; };
 		EF1CE53D2623D9570069A459 /* GDPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDPerson.h; sourceTree = "<group>"; };
 		EF1CE53E2623D9570069A459 /* GDPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDPerson.m; sourceTree = "<group>"; };
 		EF1CE559262684630069A459 /* TestBaseViewController+Beauty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestBaseViewController+Beauty.h"; sourceTree = "<group>"; };
@@ -312,11 +350,36 @@
 		EF5864B8260ED0F300405197 /* Presenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
 		EF5864BB260ED20B00405197 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		EF5864BC260ED20C00405197 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		EF5C749E2653D1C000968FA7 /* WDTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDTextField.h; sourceTree = "<group>"; };
+		EF5C749F2653D1C000968FA7 /* WDTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDTextField.m; sourceTree = "<group>"; };
+		EF5D5B1E266C60660039B371 /* AniViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AniViewController.h; sourceTree = "<group>"; };
+		EF5D5B1F266C60660039B371 /* AniViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AniViewController.m; sourceTree = "<group>"; };
+		EF5D5B20266C60660039B371 /* AniViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AniViewController.xib; sourceTree = "<group>"; };
 		EF61ECB8264512F700BDFA2A /* CalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		EF61ECB9264512F700BDFA2A /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		EF61ECBA264512F700BDFA2A /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		EF7D90AE268C9F4700EFC040 /* CustomHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomHeightViewController.h; sourceTree = "<group>"; };
+		EF7D90AF268C9F4700EFC040 /* CustomHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomHeightViewController.m; sourceTree = "<group>"; };
+		EF7D90B0268C9F4700EFC040 /* CustomHeightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeightViewController.xib; sourceTree = "<group>"; };
+		EF7D90B3268C9FD900EFC040 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		EF7D90B4268C9FD900EFC040 /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		EF8E047F26317F0E00F8AD8D /* TKSDWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKSDWeakProxy.m; sourceTree = "<group>"; };
 		EF8E048026317F0E00F8AD8D /* TKSDWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKSDWeakProxy.h; sourceTree = "<group>"; };
+		EF90650126705B15000921DE /* AudioVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioVideoViewController.h; sourceTree = "<group>"; };
+		EF90650226705B15000921DE /* AudioVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioVideoViewController.m; sourceTree = "<group>"; };
+		EF90650826705B74000921DE /* wechatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wechatViewController.h; sourceTree = "<group>"; };
+		EF90650926705B74000921DE /* wechatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wechatViewController.m; sourceTree = "<group>"; };
+		EF90650A26705B74000921DE /* wechatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = wechatViewController.xib; sourceTree = "<group>"; };
+		EF90651026706C93000921DE /* av.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = av.storyboard; sourceTree = "<group>"; };
+		EF90651626706EEA000921DE /* TTImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImagePickerController.h; sourceTree = "<group>"; };
+		EF90651726706EEA000921DE /* TTImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImagePickerController.m; sourceTree = "<group>"; };
+		EF90651826706EEA000921DE /* TTSimplePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSimplePlayViewController.h; sourceTree = "<group>"; };
+		EF90651926706EEA000921DE /* TTRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRecordViewController.h; sourceTree = "<group>"; };
+		EF90651A26706EEA000921DE /* TTSimplePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSimplePlayViewController.m; sourceTree = "<group>"; };
+		EF90651B26706EEA000921DE /* TTRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRecordViewController.m; sourceTree = "<group>"; };
+		EF9B79E4266386E10053FFDE /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		EF9B79E5266386E10053FFDE /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		EF9B79E6266386E10053FFDE /* TimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
 		EFADD027263AAC6D004DC4F4 /* testMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testMarco.h; sourceTree = "<group>"; };
 		EFB2C0D526451DF600B90B9B /* RangePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangePickerCell.m; sourceTree = "<group>"; };
 		EFB2C0D626451DF600B90B9B /* StoryboardExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryboardExampleViewController.m; sourceTree = "<group>"; };
@@ -595,6 +658,19 @@
 		EFB2C440264692DE00B90B9B /* ContentExpendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentExpendViewController.m; sourceTree = "<group>"; };
 		EFB2C441264692DE00B90B9B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EFB2C442264692DE00B90B9B /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		EFB2C44E264939F500B90B9B /* TelephoneCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TelephoneCodeViewController.h; sourceTree = "<group>"; };
+		EFB2C44F264939F500B90B9B /* TelephoneCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TelephoneCodeViewController.m; sourceTree = "<group>"; };
+		EFB2C450264939F500B90B9B /* TelephoneCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelephoneCodeViewController.xib; sourceTree = "<group>"; };
+		EFB2C462264A1C6B00B90B9B /* CountDownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownViewController.h; sourceTree = "<group>"; };
+		EFB2C463264A1C6B00B90B9B /* CountDownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
+		EFB2C464264A1C6B00B90B9B /* CountDownViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountDownViewController.xib; sourceTree = "<group>"; };
+		EFB2C469264A1CB900B90B9B /* StoreDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreDataViewController.h; sourceTree = "<group>"; };
+		EFB2C46A264A1CB900B90B9B /* StoreDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreDataViewController.m; sourceTree = "<group>"; };
+		EFB2C46B264A1CB900B90B9B /* StoreDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreDataViewController.xib; sourceTree = "<group>"; };
+		EFB2C46F264A1CD300B90B9B /* UserData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
+		EFB2C470264A1CD300B90B9B /* UserData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
+		EFB2C47A264A36CB00B90B9B /* TestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestManager.h; sourceTree = "<group>"; };
+		EFB2C47B264A36CB00B90B9B /* TestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestManager.m; sourceTree = "<group>"; };
 		EFB618052617291E00C39568 /* AudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioViewController.h; sourceTree = "<group>"; };
 		EFB618062617291E00C39568 /* AudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioViewController.m; sourceTree = "<group>"; };
 		EFB61810261C63F100C39568 /* MasonryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
@@ -605,6 +681,17 @@
 		EFC0B851261DAA3500900242 /* TestOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneViewController.m; sourceTree = "<group>"; };
 		EFC0B856261ED9EB00900242 /* TestShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestShared.h; sourceTree = "<group>"; };
 		EFC0B857261ED9EB00900242 /* TestShared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestShared.m; sourceTree = "<group>"; };
+		EFD65D17268729F600321346 /* RemarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemarkViewController.h; sourceTree = "<group>"; };
+		EFD65D18268729F600321346 /* RemarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemarkViewController.m; sourceTree = "<group>"; };
+		EFD65D19268729F600321346 /* RemarkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemarkViewController.xib; sourceTree = "<group>"; };
+		EFD6AD93264CB594006912CA /* IANActivityIndicatorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IANActivityIndicatorButton.m; sourceTree = "<group>"; };
+		EFD6AD94264CB594006912CA /* IANActivityIndicatorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IANActivityIndicatorButton.h; sourceTree = "<group>"; };
+		EFD6AD95264CB594006912CA /* LoadingBtnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingBtnViewController.m; sourceTree = "<group>"; };
+		EFD6AD96264CB594006912CA /* UIButton+IANActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+IANActivityView.h"; sourceTree = "<group>"; };
+		EFD6AD97264CB594006912CA /* LoadingBtnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingBtnViewController.h; sourceTree = "<group>"; };
+		EFD6AD98264CB594006912CA /* UIButton+IANActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+IANActivityView.m"; sourceTree = "<group>"; };
+		EFD6AD9D264CBAB3006912CA /* UIControl+Limit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Limit.h"; sourceTree = "<group>"; };
+		EFD6AD9E264CBAB3006912CA /* UIControl+Limit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Limit.m"; sourceTree = "<group>"; };
 		F86BD6B0DCB0D47DB4F9C104 /* libPods-Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -629,6 +716,17 @@
 				C22B3B87E3710AB3F03BF412 /* Pods-Test.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF10B937264A86810000A5A4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EF10B938264A86A00000A5A4 /* UILabel+ChangeLineSpaceAndWordSpace.h */,
+				EF10B939264A86A00000A5A4 /* UILabel+ChangeLineSpaceAndWordSpace.m */,
+				EF10B94E264AA72B0000A5A4 /* UIButton+ImageAlignmentStyle.h */,
+				EF10B94F264AA72B0000A5A4 /* UIButton+ImageAlignmentStyle.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		EF1CE53C2623D93B0069A459 /* 内存地址面试 */ = {
@@ -879,6 +977,18 @@
 				EFC0B850261DAA3500900242 /* TestOneViewController.h */,
 				EFC0B851261DAA3500900242 /* TestOneViewController.m */,
 				EF3F20842644D08B00B6DB4E /* PrefixHeader.pch */,
+				EF7D90AD268C9F2200EFC040 /* Masonry适配高度 */,
+				EFD65D16268729D100321346 /* 评论动画 */,
+				EF90650026705AF9000921DE /* 图文混排 */,
+				EF9064FF26705ADD000921DE /* 音视频录制播放 */,
+				EF5D5B24266C606D0039B371 /* 动画 */,
+				EF9B79E3266386C30053FFDE /* 倒计时使用 */,
+				EFD6AD91264CB3B9006912CA /* 按钮loading */,
+				EF10B937264A86810000A5A4 /* Category */,
+				EFB2C461264A1C4000B90B9B /* 单例存储数据 */,
+				EFB2C460264A1C2400B90B9B /* 验证码倒计时 */,
+				EFB2C45F264A14CF00B90B9B /* 国际化 */,
+				EFB2C44D264939AC00B90B9B /* 国际区号 */,
 				EFB2C3D526466A2000B90B9B /* 卡片折叠 */,
 				EFB2C22326462EC000B90B9B /* 文档查阅下载 */,
 				EFB2C1352645421400B90B9B /* 饼状图 */,
@@ -959,6 +1069,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EF5D5B24266C606D0039B371 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				EF5D5B1E266C60660039B371 /* AniViewController.h */,
+				EF5D5B1F266C60660039B371 /* AniViewController.m */,
+				EF5D5B20266C60660039B371 /* AniViewController.xib */,
+			);
+			path = "动画";
+			sourceTree = "<group>";
+		};
+		EF7D90AD268C9F2200EFC040 /* Masonry适配高度 */ = {
+			isa = PBXGroup;
+			children = (
+				EF7D90AE268C9F4700EFC040 /* CustomHeightViewController.h */,
+				EF7D90AF268C9F4700EFC040 /* CustomHeightViewController.m */,
+				EF7D90B0268C9F4700EFC040 /* CustomHeightViewController.xib */,
+				EF7D90B3268C9FD900EFC040 /* CustomView.h */,
+				EF7D90B4268C9FD900EFC040 /* CustomView.m */,
+			);
+			path = "Masonry适配高度";
+			sourceTree = "<group>";
+		};
 		EF8E045F262D566400F8AD8D /* 类别调用 */ = {
 			isa = PBXGroup;
 			children = (
@@ -975,6 +1107,58 @@
 				EF8E047F26317F0E00F8AD8D /* TKSDWeakProxy.m */,
 			);
 			path = "定时器";
+			sourceTree = "<group>";
+		};
+		EF9064FF26705ADD000921DE /* 音视频录制播放 */ = {
+			isa = PBXGroup;
+			children = (
+				EF90651426706EEA000921DE /* TTAVFoundation */,
+				EF90650126705B15000921DE /* AudioVideoViewController.h */,
+				EF90650226705B15000921DE /* AudioVideoViewController.m */,
+				EF90651026706C93000921DE /* av.storyboard */,
+			);
+			path = "音视频录制播放";
+			sourceTree = "<group>";
+		};
+		EF90650026705AF9000921DE /* 图文混排 */ = {
+			isa = PBXGroup;
+			children = (
+				EF90650826705B74000921DE /* wechatViewController.h */,
+				EF90650926705B74000921DE /* wechatViewController.m */,
+				EF90650A26705B74000921DE /* wechatViewController.xib */,
+			);
+			path = "图文混排";
+			sourceTree = "<group>";
+		};
+		EF90651426706EEA000921DE /* TTAVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				EF90651526706EEA000921DE /* TTImagePickerController */,
+				EF90651926706EEA000921DE /* TTRecordViewController.h */,
+				EF90651B26706EEA000921DE /* TTRecordViewController.m */,
+				EF90651826706EEA000921DE /* TTSimplePlayViewController.h */,
+				EF90651A26706EEA000921DE /* TTSimplePlayViewController.m */,
+			);
+			path = TTAVFoundation;
+			sourceTree = "<group>";
+		};
+		EF90651526706EEA000921DE /* TTImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				EF90651626706EEA000921DE /* TTImagePickerController.h */,
+				EF90651726706EEA000921DE /* TTImagePickerController.m */,
+			);
+			path = TTImagePickerController;
+			sourceTree = "<group>";
+		};
+		EF9B79E3266386C30053FFDE /* 倒计时使用 */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B79E4266386E10053FFDE /* TimerViewController.h */,
+				EF9B79E5266386E10053FFDE /* TimerViewController.m */,
+				EF9B79E6266386E10053FFDE /* TimerViewController.xib */,
+			);
+			path = "倒计时使用";
 			sourceTree = "<group>";
 		};
 		EFADD026263AABF4004DC4F4 /* iPad分屏 */ = {
@@ -999,6 +1183,8 @@
 				EFB2C103264521C700B90B9B /* FillCodeViewController.xib */,
 				EFB2C1082645262500B90B9B /* ZZRTextView.h */,
 				EFB2C1092645262500B90B9B /* ZZRTextView.m */,
+				EF5C749E2653D1C000968FA7 /* WDTextField.h */,
+				EF5C749F2653D1C000968FA7 /* WDTextField.m */,
 				EFB2C10C2645289E00B90B9B /* KLCodeResignView.h */,
 				EFB2C10D2645289F00B90B9B /* KLCodeResignView.m */,
 			);
@@ -1437,6 +1623,49 @@
 			path = contentExpend;
 			sourceTree = "<group>";
 		};
+		EFB2C44D264939AC00B90B9B /* 国际区号 */ = {
+			isa = PBXGroup;
+			children = (
+				EFB2C44E264939F500B90B9B /* TelephoneCodeViewController.h */,
+				EFB2C44F264939F500B90B9B /* TelephoneCodeViewController.m */,
+				EFB2C450264939F500B90B9B /* TelephoneCodeViewController.xib */,
+			);
+			path = "国际区号";
+			sourceTree = "<group>";
+		};
+		EFB2C45F264A14CF00B90B9B /* 国际化 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "国际化";
+			sourceTree = "<group>";
+		};
+		EFB2C460264A1C2400B90B9B /* 验证码倒计时 */ = {
+			isa = PBXGroup;
+			children = (
+				EFB2C462264A1C6B00B90B9B /* CountDownViewController.h */,
+				EFB2C463264A1C6B00B90B9B /* CountDownViewController.m */,
+				EFB2C464264A1C6B00B90B9B /* CountDownViewController.xib */,
+				EF10B918264A65DB0000A5A4 /* TheObject.h */,
+				EF10B919264A65DB0000A5A4 /* TheObject.m */,
+			);
+			path = "验证码倒计时";
+			sourceTree = "<group>";
+		};
+		EFB2C461264A1C4000B90B9B /* 单例存储数据 */ = {
+			isa = PBXGroup;
+			children = (
+				EFB2C469264A1CB900B90B9B /* StoreDataViewController.h */,
+				EFB2C46A264A1CB900B90B9B /* StoreDataViewController.m */,
+				EFB2C46B264A1CB900B90B9B /* StoreDataViewController.xib */,
+				EFB2C46F264A1CD300B90B9B /* UserData.h */,
+				EFB2C470264A1CD300B90B9B /* UserData.m */,
+				EFB2C47A264A36CB00B90B9B /* TestManager.h */,
+				EFB2C47B264A36CB00B90B9B /* TestManager.m */,
+			);
+			path = "单例存储数据";
+			sourceTree = "<group>";
+		};
 		EFB618092617292400C39568 /* 音量控制 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1473,6 +1702,31 @@
 				EFC0B857261ED9EB00900242 /* TestShared.m */,
 			);
 			path = "单例使用";
+			sourceTree = "<group>";
+		};
+		EFD65D16268729D100321346 /* 评论动画 */ = {
+			isa = PBXGroup;
+			children = (
+				EFD65D17268729F600321346 /* RemarkViewController.h */,
+				EFD65D18268729F600321346 /* RemarkViewController.m */,
+				EFD65D19268729F600321346 /* RemarkViewController.xib */,
+			);
+			path = "评论动画";
+			sourceTree = "<group>";
+		};
+		EFD6AD91264CB3B9006912CA /* 按钮loading */ = {
+			isa = PBXGroup;
+			children = (
+				EFD6AD94264CB594006912CA /* IANActivityIndicatorButton.h */,
+				EFD6AD93264CB594006912CA /* IANActivityIndicatorButton.m */,
+				EFD6AD97264CB594006912CA /* LoadingBtnViewController.h */,
+				EFD6AD95264CB594006912CA /* LoadingBtnViewController.m */,
+				EFD6AD96264CB594006912CA /* UIButton+IANActivityView.h */,
+				EFD6AD98264CB594006912CA /* UIButton+IANActivityView.m */,
+				EFD6AD9D264CBAB3006912CA /* UIControl+Limit.h */,
+				EFD6AD9E264CBAB3006912CA /* UIControl+Limit.m */,
+			);
+			path = "按钮loading";
 			sourceTree = "<group>";
 		};
 		F0EEF80ED5A33D3771B9595A /* Frameworks */ = {
@@ -1546,9 +1800,11 @@
 				EFB2C3622646393100B90B9B /* Reader-Mark-N@2x.png in Resources */,
 				EFB2C1EC2646238700B90B9B /* NSURLSessionDelegateDownloadFileViewController.xib in Resources */,
 				EFB2C3672646393100B90B9B /* 001.pdf in Resources */,
+				EF7D90B2268C9F4700EFC040 /* CustomHeightViewController.xib in Resources */,
 				EFB2C42D2646913300B90B9B /* ico_faq_d.png in Resources */,
 				EFB2C1F62646238700B90B9B /* NSURLConnectionResumeDownloadFileViewController.xib in Resources */,
 				EFB2C3CD26463C5100B90B9B /* TestDownLoadViewController.xib in Resources */,
+				EF9B79E8266386E10053FFDE /* TimerViewController.xib in Resources */,
 				EFB2C34B2646393100B90B9B /* Reader-Print.png in Resources */,
 				EFB2C1F22646238700B90B9B /* NSURLSessionBlockDownloadFileViewController.xib in Resources */,
 				EFB2C105264521C700B90B9B /* FillCodeViewController.xib in Resources */,
@@ -1559,16 +1815,19 @@
 				EFB2C4332646913300B90B9B /* ico_listdown.png in Resources */,
 				EF3F20D42644D18200B6DB4E /* loading01.png in Resources */,
 				EFB2C2002646238700B90B9B /* NSURLSessionResumeDownloadFileViewController.xib in Resources */,
+				EF90651126706C93000921DE /* av.storyboard in Resources */,
 				EFB2C3502646393100B90B9B /* Reader-Button-H.png in Resources */,
 				EF3F20D22644D18200B6DB4E /* loading03.png in Resources */,
 				EFB2C1EE2646238700B90B9B /* AFNetworkingOfflineResumeDownloadFileViewController.xib in Resources */,
 				EFB2C3522646393100B90B9B /* Reader-Button-N.png in Resources */,
 				EFB2C35C2646393100B90B9B /* Reader-Mark-Y.png in Resources */,
 				EFB2C42E2646913300B90B9B /* ico_list.png in Resources */,
+				EFB2C46D264A1CB900B90B9B /* StoreDataViewController.xib in Resources */,
 				EF3F20D12644D18200B6DB4E /* loading08.png in Resources */,
 				EFB2C1C626456EDC00B90B9B /* RunLoopViewController.xib in Resources */,
 				EFB2C3512646393100B90B9B /* AppIcon-076.png in Resources */,
 				EF3F20CD2644D18200B6DB4E /* MBProgressHUD.bundle in Resources */,
+				EF90650C26705B74000921DE /* wechatViewController.xib in Resources */,
 				EF58649D260ECED600405197 /* Assets.xcassets in Resources */,
 				EFB2C4312646913300B90B9B /* QQList.gif in Resources */,
 				EFB2C4342646913300B90B9B /* ExpandCell.xib in Resources */,
@@ -1582,6 +1841,7 @@
 				EFB2C3482646393100B90B9B /* Reader-Email@2x.png in Resources */,
 				EFB2C34D2646393100B90B9B /* Reader-Email@3x.png in Resources */,
 				EFB2C1F32646238700B90B9B /* AFNetworkingDownloadFileViewController.xib in Resources */,
+				EFB2C452264939F500B90B9B /* TelephoneCodeViewController.xib in Resources */,
 				EFB2C3592646393100B90B9B /* Reader-Thumbs@3x.png in Resources */,
 				EFB2C3612646393100B90B9B /* Reader-Export.png in Resources */,
 				EF3F20CF2644D18200B6DB4E /* loadingImg.gif in Resources */,
@@ -1590,6 +1850,7 @@
 				EFB2C3552646393100B90B9B /* Reader-Print@2x.png in Resources */,
 				EFB2C3642646393100B90B9B /* AppIcon-180.png in Resources */,
 				EFB2C42F2646913300B90B9B /* line_real.png in Resources */,
+				EFD65D1B268729F600321346 /* RemarkViewController.xib in Resources */,
 				EFB2C3DA26466B2900B90B9B /* CardFoldViewController.xib in Resources */,
 				EFB2C42B2646913300B90B9B /* FriendCell.xib in Resources */,
 				EFB2C34F2646393100B90B9B /* Reader-Button-H@3x.png in Resources */,
@@ -1613,7 +1874,9 @@
 				EFB2C1F82646238700B90B9B /* NSDataDownloadSmallFileViewController.xib in Resources */,
 				EFB2C34A2646393100B90B9B /* Reader-Button-N@3x.png in Resources */,
 				EFB2C35B2646393100B90B9B /* AppIcon-120.png in Resources */,
+				EF5D5B22266C60660039B371 /* AniViewController.xib in Resources */,
 				EFB2C35D2646393100B90B9B /* Reader-Mark-N.png in Resources */,
+				EFB2C466264A1C6B00B90B9B /* CountDownViewController.xib in Resources */,
 				EF3F20D62644D18200B6DB4E /* loading05.png in Resources */,
 				EF3F20D72644D18200B6DB4E /* loading04.png in Resources */,
 				EFB2C1FE2646238700B90B9B /* NSURLSessionOfflineResumeDownloadFileViewController.xib in Resources */,
@@ -1675,6 +1938,7 @@
 				EF3F20CC2644D18200B6DB4E /* MBProgressHUD+MJ.m in Sources */,
 				EFB2C12F2645374D00B90B9B /* TZImageUploadOperation.m in Sources */,
 				EFB2C1FF2646238700B90B9B /* NSDataDownloadSmallFileViewController.m in Sources */,
+				EF5C74A02653D1C000968FA7 /* WDTextField.m in Sources */,
 				EFB2C10E2645289F00B90B9B /* KLCodeResignView.m in Sources */,
 				EFB2C1F92646238700B90B9B /* AFNetworkingOfflineResumeDownloadFileViewController.m in Sources */,
 				EFB2C3452646393100B90B9B /* ReaderConstants.m in Sources */,
@@ -1683,12 +1947,14 @@
 				EFB2C1FD2646238700B90B9B /* AFNetworkingDownloadFileViewController.m in Sources */,
 				EFB2C3472646393100B90B9B /* ReaderMainPagebar.m in Sources */,
 				EFB2C1A6264546DD00B90B9B /* ZFGenericAxis.m in Sources */,
+				EFD6AD9A264CB595006912CA /* LoadingBtnViewController.m in Sources */,
 				EFB2C0FD26451DF800B90B9B /* LoadViewExampleViewController.m in Sources */,
 				EFB2C3372646393100B90B9B /* ReaderContentPage.m in Sources */,
 				EF3F20C22644D18200B6DB4E /* AudioPlayerService.m in Sources */,
 				EFB2C33A2646393100B90B9B /* ReaderContentView.m in Sources */,
 				EFB2C199264546DD00B90B9B /* ZFPieChart.m in Sources */,
 				EFB2C1EF2646238700B90B9B /* NSURLConnectionResumeDownloadFileViewController.m in Sources */,
+				EFB2C465264A1C6B00B90B9B /* CountDownViewController.m in Sources */,
 				EFB2C443264692DE00B90B9B /* NewsModel.m in Sources */,
 				EFB2C3412646393100B90B9B /* ReaderThumbCache.m in Sources */,
 				EF3F20CE2644D18200B6DB4E /* HubLoading.m in Sources */,
@@ -1699,23 +1965,29 @@
 				EF3F20BF2644D18200B6DB4E /* FMAudioMicViewController.m in Sources */,
 				EFB2C1AB264546DD00B90B9B /* ZFHorizontalBarChart.m in Sources */,
 				EFB618072617291E00C39568 /* AudioViewController.m in Sources */,
+				EF90651C26706EEA000921DE /* TTImagePickerController.m in Sources */,
 				EFB2C33C2646393100B90B9B /* ReaderThumbFetch.m in Sources */,
+				EF7D90B5268C9FD900EFC040 /* CustomView.m in Sources */,
 				EFB2C1FC2646238700B90B9B /* NSURLSessionDelegateDownloadFileViewController.m in Sources */,
 				EFB2C1A5264546DD00B90B9B /* ZFRadarChart.m in Sources */,
+				EFB2C47C264A36CB00B90B9B /* TestManager.m in Sources */,
 				EF3F20C82644D18200B6DB4E /* UIImage+buffer.m in Sources */,
 				EFB2C0FA26451DF800B90B9B /* DIYCalendarCell.m in Sources */,
 				EFB2C1312645374D00B90B9B /* FLAnimatedImage.m in Sources */,
 				EF1CE5602626DB500069A459 /* TestSuperBaseViewController.m in Sources */,
+				EFD65D1A268729F600321346 /* RemarkViewController.m in Sources */,
 				EFB2C0FC26451DF800B90B9B /* FullScreenExampleViewController.m in Sources */,
 				EFB2C444264692DE00B90B9B /* NewsCell.m in Sources */,
 				EFB2C3CE26463C5100B90B9B /* TestDownLoadViewController.m in Sources */,
 				EFB2C3382646393100B90B9B /* ReaderThumbRender.m in Sources */,
 				EFB2C1A8264546DD00B90B9B /* ZFCurveAttribute.m in Sources */,
 				EFB2C1A2264546DD00B90B9B /* ZFLabel.m in Sources */,
+				EFB2C451264939F500B90B9B /* TelephoneCodeViewController.m in Sources */,
 				EFB2C0F526451DF800B90B9B /* ButtonsViewController.m in Sources */,
 				EFB2C0FB26451DF800B90B9B /* DelegateAppearanceViewController.m in Sources */,
 				EFB2C191264546DD00B90B9B /* UIColor+Zirkfied.m in Sources */,
 				EFB2C18F264546DD00B90B9B /* UIView+Zirkfied.m in Sources */,
+				EF7D90B1268C9F4700EFC040 /* CustomHeightViewController.m in Sources */,
 				EFB2C4362646913300B90B9B /* FriendCell.m in Sources */,
 				EFB2C1A1264546DD00B90B9B /* ZFPopoverLabel.m in Sources */,
 				EFB2C196264546DD00B90B9B /* ZFHorizontalAxis.m in Sources */,
@@ -1726,6 +1998,7 @@
 				EF586498260ECED500405197 /* ViewController.m in Sources */,
 				EFB2C1B02645471E00B90B9B /* PieChartViewController.m in Sources */,
 				EFB2C1FB2646238700B90B9B /* NSURLSessionOfflineResumeDownloadFileViewController.m in Sources */,
+				EF90650B26705B74000921DE /* wechatViewController.m in Sources */,
 				EFB2C3362646393100B90B9B /* ReaderThumbQueue.m in Sources */,
 				EF3F20C92644D18200B6DB4E /* AudioTool.m in Sources */,
 				EFB2C36B2646393100B90B9B /* CGContextDrawPDFReaderController.m in Sources */,
@@ -1736,6 +2009,7 @@
 				EFB2C3442646393100B90B9B /* ReaderThumbRequest.m in Sources */,
 				EFB2C3462646393100B90B9B /* ThumbsMainToolbar.m in Sources */,
 				EFB2C4372646913300B90B9B /* GroupModel.m in Sources */,
+				EF9B79E7266386E10053FFDE /* TimerViewController.m in Sources */,
 				EFC0B858261ED9EB00900242 /* TestShared.m in Sources */,
 				EFB2C3392646393100B90B9B /* CGPDFDocument.m in Sources */,
 				EFB2C0F326451DF800B90B9B /* HidePlaceholderViewController.m in Sources */,
@@ -1749,9 +2023,11 @@
 				EFB2C1AA264546DD00B90B9B /* ZFWave.m in Sources */,
 				EFB2C1ED2646238700B90B9B /* NSURLSessionResumeDownloadFileViewController.m in Sources */,
 				EFB2C19C264546DD00B90B9B /* ZFLineChart.m in Sources */,
+				EFB2C471264A1CD300B90B9B /* UserData.m in Sources */,
 				EFB2C4352646913300B90B9B /* ExpandCell.m in Sources */,
 				EFB61812261C63F100C39568 /* MasonryViewController.m in Sources */,
 				EFB2C36C2646393100B90B9B /* CGContextDrawPDFPageModel.m in Sources */,
+				EFB2C46C264A1CB900B90B9B /* StoreDataViewController.m in Sources */,
 				EF8E048126317F0F00F8AD8D /* TKSDWeakProxy.m in Sources */,
 				EFB2C446264692DE00B90B9B /* ContentExpendViewController.m in Sources */,
 				EFB2C18D264546DD00B90B9B /* ZFBarChart.m in Sources */,
@@ -1760,6 +2036,7 @@
 				EF3F20C02644D18200B6DB4E /* NSString+FMComoutedText.m in Sources */,
 				EFB2C42A2646913300B90B9B /* FoldTableViewController.m in Sources */,
 				EFB2C1A7264546DD00B90B9B /* ZFGradientAttribute.m in Sources */,
+				EF90650426705B15000921DE /* AudioVideoViewController.m in Sources */,
 				EFB2C3662646393100B90B9B /* CGContextDrawPDFPageController.m in Sources */,
 				EFB2C1C526456EDC00B90B9B /* RunLoopViewController.m in Sources */,
 				EFB2C1322645374D00B90B9B /* FLAnimatedImageView.m in Sources */,
@@ -1771,10 +2048,13 @@
 				EFB2C33E2646393100B90B9B /* ReaderMainToolbar.m in Sources */,
 				EFB2C1CA2645742000B90B9B /* MyThread.m in Sources */,
 				EFB2C3432646393100B90B9B /* ThumbsViewController.m in Sources */,
+				EFD6AD99264CB595006912CA /* IANActivityIndicatorButton.m in Sources */,
 				EFB2C0F626451DF800B90B9B /* FSTableViewController.m in Sources */,
 				EF61ECBB264512F700BDFA2A /* CalendarViewController.m in Sources */,
+				EFD6AD9B264CB595006912CA /* UIButton+IANActivityView.m in Sources */,
 				EFB2C36E2646393100B90B9B /* ScanViewController.m in Sources */,
 				EFB2C3422646393100B90B9B /* ReaderThumbsView.m in Sources */,
+				EF10B93A264A86A00000A5A4 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
 				EF3F20602643DE2C00B6DB4E /* TestSplitViewController.m in Sources */,
 				EFB2C36F2646393100B90B9B /* DownloadViewController.m in Sources */,
 				EFB2C195264546DD00B90B9B /* ZFCirque.m in Sources */,
@@ -1782,12 +2062,16 @@
 				EF5864A3260ECED600405197 /* main.m in Sources */,
 				EF3F20C42644D18200B6DB4E /* VideoAudioEdit.m in Sources */,
 				EFB2C33D2646393100B90B9B /* ReaderThumbView.m in Sources */,
+				EF90651D26706EEA000921DE /* TTSimplePlayViewController.m in Sources */,
 				EFB2C3342646393100B90B9B /* ReaderContentTile.m in Sources */,
 				EF1CE53F2623D9570069A459 /* GDPerson.m in Sources */,
 				EFB2C10A2645262500B90B9B /* ZZRTextView.m in Sources */,
 				EF586495260ECED500405197 /* SceneDelegate.m in Sources */,
+				EF10B91A264A65DB0000A5A4 /* TheObject.m in Sources */,
 				EFB2C197264546DD00B90B9B /* ZFConst.m in Sources */,
+				EF5D5B21266C60660039B371 /* AniViewController.m in Sources */,
 				EFB2C19E264546DD00B90B9B /* ZFLine.m in Sources */,
+				EFD6AD9F264CBAB3006912CA /* UIControl+Limit.m in Sources */,
 				EF3F20C52644D18200B6DB4E /* ProgressLayer.m in Sources */,
 				EFB2C0FE26451DF800B90B9B /* FSCalendarScopeExampleViewController.m in Sources */,
 				EFB2C1F52646238700B90B9B /* NSURLConnectionDownloadBigFileViewController.m in Sources */,
@@ -1795,12 +2079,14 @@
 				EFB2C1A4264546DD00B90B9B /* ZFPolygon.m in Sources */,
 				EFB2C1302645374D00B90B9B /* TZTestCell.m in Sources */,
 				EFB2C3702646393100B90B9B /* PDFWebViewViewController.m in Sources */,
+				EF10B950264AA72B0000A5A4 /* UIButton+ImageAlignmentStyle.m in Sources */,
 				EFB2C18E264546DD00B90B9B /* ZFBar.m in Sources */,
 				EFB2C1F12646238700B90B9B /* NSURLConnectionDownloadSmallFileViewController.m in Sources */,
 				EFB2C18C264546DD00B90B9B /* ZFGenericChart.m in Sources */,
 				EFB2C3652646393100B90B9B /* BackViewController.m in Sources */,
 				EFB2C1332645374D00B90B9B /* LxGridViewFlowLayout.m in Sources */,
 				EF3F20C72644D18200B6DB4E /* VideoAudioComposition.m in Sources */,
+				EF90651E26706EEA000921DE /* TTRecordViewController.m in Sources */,
 				EFB2C1AC264546DD00B90B9B /* ZFHorizontalBar.m in Sources */,
 				EF3F20C12644D18200B6DB4E /* PPXTimer.m in Sources */,
 				EFB2C194264546DD00B90B9B /* ZFCirqueChart.m in Sources */,
@@ -1963,7 +2249,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Test/PrefixHeader.pch";
 				INFOPLIST_FILE = Test/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1993,7 +2279,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Test/PrefixHeader.pch";
 				INFOPLIST_FILE = Test/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -25,7 +25,6 @@ PODS:
   - SDWebImage/Core (5.10.4)
   - TZImagePickerController (3.5.8)
   - "UITableView+FDTemplateLayoutCell (1.6)"
-  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -36,7 +35,6 @@ DEPENDENCIES:
   - SDWebImage
   - TZImagePickerController
   - "UITableView+FDTemplateLayoutCell"
-  - YYModel
 
 SPEC REPOS:
   https://gitee.com/mirrors/CocoaPods-Specs.git:
@@ -49,7 +47,6 @@ SPEC REPOS:
     - SDWebImage
     - TZImagePickerController
     - "UITableView+FDTemplateLayoutCell"
-    - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -61,8 +58,7 @@ SPEC CHECKSUMS:
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   TZImagePickerController: 7fd9702897ef8c0b7c951e5463f4bcf398296f9e
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 671013744d55ab918e44588221b60857216fd4d0
+PODFILE CHECKSUM: 623a32e8de2cd7439e986f6650187331efa27a7b
 
 COCOAPODS: 1.10.1

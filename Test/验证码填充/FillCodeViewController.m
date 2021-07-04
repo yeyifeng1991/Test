@@ -25,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    [self roundText];
     [self bottomLineText];
     
 }
@@ -57,7 +58,7 @@
 
 - (void)bottomLineText {
     tk_weakify(self);
-        KLCodeResignView *codeView = [[KLCodeResignView alloc] initWithCodeBits:4];
+    KLCodeResignView *codeView = [[KLCodeResignView alloc] initWithCodeBits:6];
         codeView.codeResignCompleted = ^(NSString * _Nonnull content) {
             //对应位数输入完成时 允许提交按钮有效 允许提交
             NSLog(@"%@", content);
@@ -70,6 +71,7 @@
             weakSelf.submitBtn.alpha = 0.5f;
         };
         [self.view addSubview:codeView];
+
         
         [codeView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(weakSelf.view).mas_offset(15.0f);
@@ -94,6 +96,10 @@
             make.top.mas_equalTo(weakSelf.view).mas_offset(260.0f);
             make.height.mas_equalTo(45.0f);
         }];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
 }
 
 - (void)ZZRTextViewDidFinishedEdit:(NSString *)codeStr
